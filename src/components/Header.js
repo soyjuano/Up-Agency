@@ -7,11 +7,11 @@ const Header = () => {
    <div className='container mx-auto'>
     <div className='flex justify-between items-center'>
     {/*   logo */}
-    <a href='#'>
+   {/*  <a href='#'>
       <img src={Logo} alt='logo' />
-    </a>
-    {/* boton */}
-    <button className='btn btn-sm'>Contáctenos</button>
+    </a> */}
+    {/* boton 
+    <button className='btn btn-sm'>Contáctenos</button> */}
     </div>
     
     </div>
