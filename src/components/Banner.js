@@ -17,26 +17,24 @@ const Banner = () => {
   return (
     <section className='section' id='home'>
       <div className='container mx-auto'>
-        <div className='flex flex-col gap-y-8 lg:flex-row lg:items-center lg:gap-x-12'>
+        <div className='flex flex-col gap-y-8 mt-12 lg:flex-row lg:items-center lg:gap-x-12'>
           {/* texto */}
           <div className='flex-1 text-center font-secondary lg:text-left'>
             <h1 className='text-[55px] font-bold leading-[0.8] lg:text-[110px]'>
               Up Agency
             </h1>
-            <div className='mb-6 text-[36px] lg:text-[60px] font-secondary font-semibold uppercase leading-[1]'>
+            <div className='my-6 text-[36px] lg:text-[60px] font-secondary font-semibold uppercase leading-[1]'>
              {/*  <span className='text-white mr-4'>Una empresa que</span> */}
-              <CSSTransition
-                in={true}
-                timeout={500}
-                classNames="fade"
-                unmountOnExit
-              >
-                <span className='text-white mr-4'>
+              
+                <span className='text-white mr-2'>
                   Una empresa que
-                </span>
-              </CSSTransition>
+                  </span>
+             
+             <span className='animate-pulse text-sky-400'>
+              Suma
+             </span>
 
-              <TypeAnimation
+             {/*  <TypeAnimation
                 sequence={[
                   'Suma',
                   2000,
@@ -49,11 +47,11 @@ const Banner = () => {
                 className='text-accent'
                 wrapper='span'
                 repeat={Infinity}
-              />
+              /> */}
             </div>
             <p className='mb-8 max-w-lg mx-auto lg:mx-0'>
-              Ideamos e implementamos soluciones integrales de medios que generan
-              resultados que suman valor real a cada marca.
+            Ideamos e implementamos soluciones integrales de medios que generan 
+            resultados que aportan valor real a cada marca.
             </p>
             <div className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
               <button className='btn btn-lg'>Contáctenos</button>
