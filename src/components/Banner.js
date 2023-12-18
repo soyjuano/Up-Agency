@@ -42,7 +42,7 @@ const Banner = () => {
                   Una empresa que
                   </span>
              
-             <span className='animate-pulse text-sky-400'>
+             <span className='animate-pulse text-secondary'>
               Suma
              </span>
 
