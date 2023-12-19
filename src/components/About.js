@@ -9,6 +9,8 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 //icono
 import { FcCheckmark } from "react-icons/fc";
+// imagen
+import Image from '../assets/aboutUp.png';
 
 
 const About = () => {
@@ -26,8 +28,23 @@ const About = () => {
           initial="hidden"
           whileInView={"show"}
           viewport={{once: false, amount: 0.3}}
-          className='flex-1 bg-aboutUp bg-contain bg-no-repeat h-[640px] 
-        mix-blend-lighten bg-top'></motion.div>
+          className='flex-1 h-[640px] 
+        mix-blend-lighten'>
+          
+          <h2 className='h2 text-secondary'>Acerca de nosotros</h2>
+            <h3 className='h3 mb-4'>
+              UP! Agency es una empresa de servicios integrales con años de
+              trayectoria en el mercado.
+            </h3>
+             {/* imagen */}
+           <motion.div 
+           variants={fadeIn('left',0.3)} 
+           initial="hidden" 
+           whileInView={'show'}
+           className=' max-w-[482px] lg:max-w-[482px]'>
+            <img src={Image} alt='imagen acerca de nosotros' />
+          </motion.div>
+        </motion.div>
           {/* texto */}
           <motion.div 
            variants={fadeIn('left', 0.5)}
@@ -35,11 +52,11 @@ const About = () => {
            whileInView={"show"}
            viewport={{once: false, amount: 0.3}}
           className='flex-1'>
-            <h2 className='h2 text-secondary'>Acerca de nosotros</h2>
+           {/*  <h2 className='h2 text-secondary'>Acerca de nosotros</h2>
             <h3 className='h3 mb-4'>
               UP! Agency es una empresa de servicios integrales con años de
               trayectoria en el mercado.
-            </h3>
+            </h3> */}
             <p>
               Somos especialistas en asesorar a nuestros clientes,
               maximizando su potencial para lograr el objetivo. El exito es nuestra meta.

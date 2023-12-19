@@ -16,7 +16,7 @@ import '../index.css';
 const Banner = () => {
   return (
     <section 
-    className='min-h-[85vh] lg:min-h-[78vh] flex items-center' 
+    className='min-h-[85vh] lg:min-h-[78vh] flex items-center mb-20' 
     id='home'>
       <div className='container mx-auto'>
         <div className='flex flex-col gap-y-8 mt-12 lg:flex-row lg:items-center lg:gap-x-12'>
@@ -105,7 +105,7 @@ const Banner = () => {
            initial="hidden" 
            whileInView={'show'}
            className='hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px]'>
-            <img src={Image} alt='' />
+            <img src={Image} alt='imagen soluciones integrales' />
           </motion.div>
         </div>
       </div>
