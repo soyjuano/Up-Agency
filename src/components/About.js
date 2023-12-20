@@ -21,7 +21,7 @@ const About = () => {
     <section className='section' id='about' ref={ref}>
       <div className='container mx-auto'>
         <div className='flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20
-        lg:gap-y-0 h-screen'>
+        lg:gap-y-0 h-fit'>
           {/* imagen */}
           <motion.div 
           variants={fadeIn('right', 0.3)}
@@ -57,27 +57,27 @@ const About = () => {
               UP! Agency es una empresa de servicios integrales con años de
               trayectoria en el mercado.
             </h3> */}
-            <p>
+            <p className='text-[22px]'>
               Somos especialistas en asesorar a nuestros clientes,
               maximizando su potencial para lograr el objetivo. El exito es nuestra meta.
             </p>
-            <p className='mb-6'>
+            <p className='mb-6 text-[22px]'>
               Nuestros productos tienen el respaldo de un gran equipo de especialistas
               en medios y eventos exclusivos.
             </p>
             {/* items */}
             <div className='flex flex-col gap-y-4 lg:gap-y-10 mb-12'>
               <div className=' mb-2 flex items-center'>
-               <FcCheckmark className='w-[30px] text-gradient' /> <h2 className='ml-2 font-primary text-sm tracking-[2px]'>Contratación de artistas </h2>
+               <FcCheckmark className='w-[30px] text-gradient' /> <h2 className='ml-2 font-primary text-lg tracking-[2px]'>Contratación de artistas </h2>
               </div>
               <div className=' mb-2 flex items-center'>
-               <FcCheckmark className='w-[30px] text-gradient' /> <h2 className='ml-2 font-primary text-sm tracking-[2px]'>Comercializacion de medios </h2>
+               <FcCheckmark className='w-[30px] text-gradient' /> <h2 className='ml-2 font-primary text-lg tracking-[2px]'>Comercializacion de medios </h2>
               </div>
               <div className=' mb-2 flex items-center'>
-               <FcCheckmark className='w-[30px] text-gradient' /> <h2 className='ml-2 font-primary text-sm tracking-[2px]'>Planificacion de medios </h2>
+               <FcCheckmark className='w-[30px] text-gradient' /> <h2 className='ml-2 font-primary text-lg tracking-[2px]'>Planificacion de medios </h2>
               </div>
               <div className=' mb-2 flex items-center'>
-               <FcCheckmark className='w-[30px] text-gradient' /> <h2 className='ml-2 font-primary text-sm tracking-[2px]'>Eventos especiales, desfiles y promociones </h2>
+               <FcCheckmark className='w-[30px] text-gradient' /> <h2 className='ml-2 font-primary text-lg tracking-[2px]'>Eventos especiales, desfiles y promociones </h2>
               </div>
             </div>
           </motion.div>
