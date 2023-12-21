@@ -60,9 +60,9 @@ const Services = () => {
          whileInView={"show"}
          viewport={{once: false, amount: 0.3}}
         className='flex-1 lg:bg-services lg:bg-bottom bg-no-repeat 
-        mix-blend-lighten mb-12 lg:mb-0'>
+        mix-blend-lighten mb-12 lg:mb-0 text-center lg:text-left'>
           <h2 className='h2 text-secondary mb-6'>Medios que Abarcamos</h2>
-          <h3 className='h3 max-w-[455px] mb-6'>
+          <h3 className='h3 mx-auto lg:mx-0 max-w-[455px] mb-6'>
           Publicidad integral para destacar en cada plataforma de difusión
           </h3>
           <button className='btn btn-sm text-primary font-tertiary text-[20px]'>Listado de Medios</button>
