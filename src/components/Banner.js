@@ -2,10 +2,7 @@ import React from 'react';
 // imagenes
 import Image from '../assets/avatar.svg';
 // icons
-import { FaGithub, FaYoutube, FaDribbble, FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa'
-// tipo de animacion
-import { TypeAnimation } from 'react-type-animation';
-import { CSSTransition } from 'react-transition-group';
+import { FaYoutube, FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa'
 //motion
 import { motion } from 'framer-motion'
 // variantes
@@ -22,6 +19,7 @@ const Banner = () => {
         <div className='flex flex-col gap-y-8 mt-12 lg:flex-row lg:items-center lg:gap-x-12'>
           {/* texto */}
           <div className='flex-1 text-center font-secondary lg:text-left'>
+
             <motion.h1 
             variants={fadeIn('up',0.3)} 
             initial="hidden" 
@@ -30,37 +28,21 @@ const Banner = () => {
             className='text-[55px] font-bold leading-[0.8] lg:text-[90px]'>
               UP! AGENCY
             </motion.h1>
-            <motion.div 
-             variants={fadeIn('up',0.4)} 
-             initial="hidden" 
-             whileInView={'show'}
-             viewport={{ once: false, amount: 0.7 }}
-             className='my-6 text-[36px] lg:text-[60px] font-secondary font-semibold uppercase leading-[1]'>
-             {/*  <span className='text-white mr-4'>Una empresa que</span> */}
-              
-                <span className='text-white mr-2'>
-                  Una empresa que
-                  </span>
-             
-             <span className='animate-pulse text-secondary'>
-              Suma
-             </span>
 
-             {/*  <TypeAnimation
-                sequence={[
-                  'Suma',
-                  2000,
-                  'Mejora',
-                  2000,
-                  'Optimiza',
-                  2000,
-                ]}
-                speed={50}
-                className='text-accent'
-                wrapper='span'
-                repeat={Infinity}
-              /> */}
+            <motion.div
+              variants={fadeIn('up', 0.4)}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{ once: false, amount: 0.7 }}
+              className='my-6 text-[36px] lg:text-[60px] font-secondary font-semibold uppercase leading-[1]'>
+              <span className='text-white mr-2'>
+                Una empresa que
+              </span>
+              <span className='animate-pulse text-secondary'>
+                Suma
+              </span>
             </motion.div>
+
             <motion.p 
              variants={fadeIn('up',0.5)} 
              initial="hidden" 
@@ -70,15 +52,20 @@ const Banner = () => {
             Ideamos e implementamos soluciones integrales de medios que generan 
             resultados que aportan valor real a cada marca.
             </motion.p>
-            <motion.div 
-             variants={fadeIn('up',0.6)} 
-             initial="hidden" 
-             whileInView={'show'}
-             viewport={{ once: false, amount: 0.7 }}
-            className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
-              <button className='btn btn-lg'>Contáctenos</button>
+
+            <motion.div
+              variants={fadeIn('up', 0.6)}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{ once: false, amount: 0.7 }}
+              className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
+              <a href='#contact'>
+                <button className='btn btn-lg' a href='/contact'>Contáctenos</button>
+              </a>
             </motion.div>
+
             {/* redes sociales */}
+
             <motion.div 
              variants={fadeIn('up',0.7)} 
              initial="hidden" 
@@ -98,8 +85,11 @@ const Banner = () => {
                 <FaInstagram />
               </a>
             </motion.div>
+
           </div>
+
           {/* imagen */}
+
           <motion.div 
            variants={fadeIn('left',0.3)} 
            initial="hidden" 
