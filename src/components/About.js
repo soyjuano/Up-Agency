@@ -1,6 +1,4 @@
 import React from 'react';
-// contador
-import Countup from 'react-countup';
 // Interseccion hook
 import { useInView } from 'react-intersection-observer';
 // motion
@@ -14,12 +12,12 @@ import Image from '../assets/aboutUp.png';
 
 
 const About = () => {
-  const [ref, inView] = useInView({
+  const [ref] = useInView({
     threshold: 0.5,
   });
   return (
     <section className='section' id='about' ref={ref}>
-      <div className='container mx-auto'>
+      <div className='container mx-auto mt-10'>
         <div className='flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20
         lg:gap-y-0 h-fit'>
           {/* imagen */}

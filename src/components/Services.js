@@ -1,7 +1,6 @@
 import React from 'react';
 // iconos
 import { BsArrowUpRight } from 'react-icons/bs';
-import { BsArrowUpRightCircle } from "react-icons/bs";
 //motion
 import { motion } from 'framer-motion';
 //variantes
@@ -51,7 +50,7 @@ const services = [
 const Services = () => {
   return (
   <section className='section' id='services'>
-    <div className='container mx-auto'>
+    <div className='container mx-auto mt-10'>
       <div className='flex flex-col lg:flex-row'>
         {/* texto e imagen*/}
         <motion.div 
