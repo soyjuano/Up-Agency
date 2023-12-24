@@ -11,7 +11,7 @@ const Nav = () => {
 
     <nav className='fixed top-2 lg:top-8 w-full overflow-hidden z-50'>  {/* POSICION DE MENU */}
 
-      <div className='container mx-auto'>
+      <div className='lg:container mx-auto'>
 
          {/*   logo */}
        {/*  <div className='mt-1 ml-5 w-auto hidden sm:hidden md:hidden lg:inline xl:inline'>
@@ -31,7 +31,7 @@ const Nav = () => {
 
 
           {/* nav inner */}
-          <div className='w-full bg-black/20 h-[86px] backdrop-blur-2xl rounded-3xl max-w-[550px] mx-auto px-5 flex justify-between items-center text-2xl text-white/50'>
+          <div className='w-full bg-black/20 h-[86px] backdrop-blur-2xl rounded-3xl max-w-[550px] mx-auto px-1 flex justify-between items-center text-2xl text-white/50'>
 
             <div className='  lg:hidden my-1  px-4'>
 

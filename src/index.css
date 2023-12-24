@@ -40,16 +40,6 @@
   border-radius: 100%;
 }
 
-/* Estilo CSS para la animación de desvanecimiento */
-.fade {
-  opacity: 0.01;
-}
-
-.fade-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-
 
 @layer base {
   body {

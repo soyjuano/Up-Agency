@@ -60,7 +60,7 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
               <a href='#contact'>
-                <button className='btn btn-lg' a href='/contact'>Contáctenos</button>
+                <button className='btn btn-lg text-primary text-lg' a href='/contact'>Contáctenos</button>
               </a>
             </motion.div>
 
@@ -71,7 +71,7 @@ const Banner = () => {
              initial="hidden" 
              whileInView={'show'}
              viewport={{ once: false, amount: 0.7 }}
-            className='flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0'>
+            className='flex text-[28px] gap-x-6 max-w-max mx-auto lg:mx-2'>
               <a href='https://www.youtube.com/channel/UCaZB702lcuvGm4hPmbOr3aA'>
                 <FaYoutube />
               </a>
