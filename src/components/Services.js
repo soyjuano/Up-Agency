@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-scroll';
+import { Link as LinkRouter} from 'react-router-dom';
 // iconos
 import { BsArrowUpRight } from 'react-icons/bs';
 //motion
@@ -13,36 +15,42 @@ const services = [
   description:
   'Servicios integrales para destacar tu marca.',
  link: 'Más info',
+ url: 'grafica',
 },
 {
   name: 'Rádio' ,
   description:
   'Estrategias efectivas para llegar a tu audiencia.',
  link: 'Más info',
+ url: 'radio',
 },
 {
   name: 'Redes Sociales' ,
   description:
   'Impulsa tu presencia en redes con UP AGENCY.',
  link: 'Más info',
+ url: 'radio',
 },
 {
   name: 'TV' ,
   description:
   'Promociones televisivas que elevan tu presencia.',
  link: 'Más info',
+ url: 'radio',
 },
 {
   name: 'Vía Pública' ,
   description:
   'Capta la atención de tu audiencia en cada rincón.',
  link: 'Más info',
+ url: 'radio',
 },
 {
   name: 'Eventos' ,
   description:
   'Mejora tus eventos contratando a nuestros artistas.',
  link: 'Más info',
+ url: 'radio',
 },
 
 ];
@@ -72,30 +80,30 @@ const Services = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{once: false, amount: 0.3}}
-       className='flex-1'>
+       className='flex-1 m-4'>
 
          {/* lista de servicios*/}
         <div>
           {services.map((service, index)=> {
             // estructura servicio 
-            const { name, description, link } = service;
+            const { name, description, link, url } = service;
             return (
-              <div className='border-b border-white/20 h-[110px] mb-[8px] flex' 
-              key={index}>
+              <div className='border-b border-white/20 h-[110px] mb-[8px] flex'
+                key={index}>
                 <div className='max-w-[476px]'>
                   <h4 className='text-[20px] tracking-wider font-primary
                   font-semibold mb-6'>{name}</h4>
                   <p className='font-secondary leading-tight'>
-                    {description} 
-                    </p>
-                  </div>
+                    {description}
+                  </p>
+                </div>
                 <div className='flex flex-col flex-1 items-end'>
-                  <a href='#' className='btn w-9 h-9 mb-[42px] flex justify-center items-center'>
-                    <BsArrowUpRight className='text-primary'/>
-                  </a>
-                  <a href='#' className='text-gradient text-sm'>
+                  <Link to={url} className='btn w-9 h-9 mb-[42px] flex justify-center items-center'>
+                    <BsArrowUpRight className='text-primary' />
+                  </Link>
+                  <p  className='text-gradient text-sm'>
                     {link}
-                    </a>
+                  </p>
                 </div>
 
               </div>

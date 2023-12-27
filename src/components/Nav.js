@@ -4,6 +4,7 @@ import { BiHomeAlt, BiUser } from 'react-icons/bi';
 import { BsClipboardData, BsBriefcase, BsChatSquareText } from 'react-icons/bs';
 // link
 import { Link } from 'react-scroll';
+import { Link as LinkRouter} from 'react-router-dom';
 import Logo from '../assets/logo.svg';
 
 const Nav = () => {

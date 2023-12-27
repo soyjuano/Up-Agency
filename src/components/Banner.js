@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 // imagenes
 import Image from '../assets/avatar.svg';
 // icons
@@ -43,14 +44,14 @@ const Banner = () => {
               </span>
             </motion.div>
 
-            <motion.p 
-             variants={fadeIn('up',0.5)} 
-             initial="hidden" 
-             whileInView={'show'}
-             viewport={{ once: false, amount: 0.7 }}
-            className='mb-8 max-w-lg mx-auto lg:mx-0'>
-            Ideamos e implementamos soluciones integrales de medios que generan 
-            resultados que aportan valor real a cada marca.
+            <motion.p
+              variants={fadeIn('up', 0.5)}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{ once: false, amount: 0.7 }}
+              className='mb-8 max-w-lg mx-auto lg:mx-0'>
+              Ideamos e implementamos soluciones integrales de medios que generan
+              resultados que aportan valor real a cada marca.
             </motion.p>
 
             <motion.div
@@ -59,9 +60,14 @@ const Banner = () => {
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
               className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
-              <a href='#contact'>
-                <button className='btn btn-lg text-primary text-lg' a href='/contact'>Contáctenos</button>
-              </a>
+              <Link to='contact'
+              activeClass='active'
+              smooth={true}
+              spy={true}
+              offset={-10}
+              >
+                <button className='btn btn-lg text-primary text-lg'>Contáctenos</button>
+              </Link>
             </motion.div>
 
             {/* redes sociales */}
