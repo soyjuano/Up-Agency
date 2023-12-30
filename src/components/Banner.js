@@ -15,7 +15,7 @@ const Banner = () => {
   return (
     <section 
     className='min-h-[85vh] lg:min-h-[78vh] flex items-center mb-20' 
-    id='banner'>
+    id='inicio'>
       <div className='container mx-auto'>
         <div className='flex flex-col gap-y-8 mt-12 lg:flex-row lg:items-center lg:gap-x-12'>
           {/* texto */}
@@ -61,7 +61,7 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
               <Link to='contact'
-              activeClass='active'
+              activeclass='active'
               smooth={true}
               spy={true}
               offset={-10}

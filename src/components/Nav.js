@@ -1,42 +1,76 @@
-import React from 'react';
-// import icons
+import React, { useEffect, useState } from 'react';
+import { SectionIds } from './SectionIds';
 import { BiHomeAlt, BiUser } from 'react-icons/bi';
 import { BsClipboardData, BsBriefcase, BsChatSquareText } from 'react-icons/bs';
-// link
-import { Link as LinkScroll } from 'react-scroll';
-import { Link as LinkRouter} from 'react-router-dom';
+import { Link as LinkRouter } from 'react-router-dom';
 import Logo from '../assets/logo.svg';
 
 const Nav = () => {
+  const [activeLink, setActiveLink] = useState("inicio");
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const marginTop = 0;
+      const scrollToY = element.getBoundingClientRect().top + window.scrollY - marginTop;
+      window.scrollTo({ top: scrollToY, behavior: "smooth" });
+    }
+  };
+
+  const determineActiveSection = () => {
+    for (let i = SectionIds.length - 1; i >= 0; i--) {
+      const section = document.getElementById(SectionIds[i]);
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 120 && rect.bottom >= 120) {
+          setActiveLink(SectionIds[i]);
+          break;
+        }
+      }
+    }
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+      determineActiveSection();
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const getIconForSection = (sectionId) => {
+    switch (sectionId) {
+      case "inicio":
+        return <BiHomeAlt />;
+      case "about":
+        return <BiUser />;
+      case "services":
+        return <BsClipboardData />;
+      case "work":
+        return <BsBriefcase />;
+      case "contact":
+        return <BsChatSquareText />;
+      default:
+        return null;
+    }
+  };
+
   return (
-
-    <nav className='fixed top-2 lg:top-8 w-full overflow-hidden z-50'>  {/* POSICION DE MENU */}
-
+    <nav className={`fixed top-2 lg:top-8 w-full overflow-hidden z-50 ${isScrolled ? "scrolled" : ""}`}>
       <div className='lg:container mx-auto'>
-
-         {/*   logo */}
-       {/*  <div className='mt-1 ml-5 w-auto hidden sm:hidden md:hidden lg:inline xl:inline'>
-
-         
-          <a href='#'>
-            <img
-              src={Logo}
-              alt='logo'
-              className='max-w-full h-auto min-w-[100px]'
-            />
-          </a>
-        </div> */}
-
         <div className='container '>
-
-
-
-          {/* nav inner */}
           <div className='w-full bg-black/20 h-[86px] backdrop-blur-2xl rounded-3xl max-w-[550px] mx-auto px-1 flex justify-between items-center text-2xl text-white/50'>
-
-            <div className='  lg:hidden my-1  px-4'>
-
-              {/*   logo */}
+            <div className='lg:hidden my-1 px-4'>
               <a href='#'>
                 <img
                   src={Logo}
@@ -46,57 +80,27 @@ const Nav = () => {
               </a>
             </div>
 
-
-            <LinkScroll
-              to='home'
-              activeClass='active'
-              smooth={true}
-              spy={true}
-              offset={-200}
-              className='cursor-pointer w-[50px] h-[50px] flex items-center justify-center'>
-              <BiHomeAlt />
-            </LinkScroll>
-            <LinkScroll
-              to='about'
-              activeClass='active'
-              smooth={true}
-              spy={true}
-              offset={-70}
-              className='cursor-pointer w-[50px] h-[50px] flex items-center justify-center'>
-              <BiUser />
-            </LinkScroll>
-            <LinkScroll
-              to='services'
-              activeClass='active'
-              smooth={true}
-              spy={true}
-              offset={-70}
-              className='cursor-pointer w-[50px] h-[50px] flex items-center justify-center'>
-              <BsClipboardData />
-            </LinkScroll>
-            <LinkScroll
-              to='work'
-              activeClass='active'
-              smooth={true}
-              spy={true}
-              offset={-50}
-              className='cursor-pointer w-[50px] h-[50px] flex items-center justify-center'>
-              <BsBriefcase />
-            </LinkScroll>
-            <LinkScroll
-              to='contact'
-              activeClass='active'
-              smooth={true}
-              spy={true}
-              offset={-10}
-              className='cursor-pointer w-[50px] h-[50px] flex items-center justify-center'>
-              <BsChatSquareText />
-            </LinkScroll>
+            <ul className='flex items-center gap-5'>
+              {SectionIds.map((sectionId, i) => (
+                <li key={i} onClick={() => scrollToSection(sectionId)}>
+                  <LinkRouter
+                    to='/'
+                    activeclass='active'
+                    className={`text-base ${activeLink === sectionId ? "active" : ""}`}
+                  >
+                    <span className="text-3xl text-center">
+                      {activeLink === sectionId ? getIconForSection(sectionId) : getIconForSection("")}
+                    </span>
+                    <span>
+                      {sectionId}
+                    </span>
+                  </LinkRouter>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
-
-
     </nav>
   );
 };

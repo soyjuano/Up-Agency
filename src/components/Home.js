@@ -15,7 +15,12 @@ const Home = () => {
 
     <div id='home' className='bg-site bg-no-repeat bg-cover overflow-hidden'>
 
-      
+      <Banner />
+      <About />
+      <Services />
+      <Work />
+      <Contact />
+      <Footer />
 
 
 
