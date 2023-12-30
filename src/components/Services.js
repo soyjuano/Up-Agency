@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-scroll';
+import { Link as LinkScroll } from 'react-scroll';
 import { Link as LinkRouter} from 'react-router-dom';
 // iconos
 import { BsArrowUpRight } from 'react-icons/bs';
@@ -98,9 +98,9 @@ const Services = () => {
                   </p>
                 </div>
                 <div className='flex flex-col flex-1 items-end'>
-                  <Link to={url} className='btn w-9 h-9 mb-[42px] flex justify-center items-center'>
+                  <LinkRouter to={url} className='btn w-9 h-9 mb-[42px] flex justify-center items-center'>
                     <BsArrowUpRight className='text-primary' />
-                  </Link>
+                  </LinkRouter>
                   <p  className='text-gradient text-sm'>
                     {link}
                   </p>

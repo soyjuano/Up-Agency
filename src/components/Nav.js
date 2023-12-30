@@ -3,7 +3,7 @@ import React from 'react';
 import { BiHomeAlt, BiUser } from 'react-icons/bi';
 import { BsClipboardData, BsBriefcase, BsChatSquareText } from 'react-icons/bs';
 // link
-import { Link } from 'react-scroll';
+import { Link as LinkScroll } from 'react-scroll';
 import { Link as LinkRouter} from 'react-router-dom';
 import Logo from '../assets/logo.svg';
 
@@ -47,7 +47,7 @@ const Nav = () => {
             </div>
 
 
-            <Link
+            <LinkScroll
               to='home'
               activeClass='active'
               smooth={true}
@@ -55,8 +55,8 @@ const Nav = () => {
               offset={-200}
               className='cursor-pointer w-[50px] h-[50px] flex items-center justify-center'>
               <BiHomeAlt />
-            </Link>
-            <Link
+            </LinkScroll>
+            <LinkScroll
               to='about'
               activeClass='active'
               smooth={true}
@@ -64,8 +64,8 @@ const Nav = () => {
               offset={-70}
               className='cursor-pointer w-[50px] h-[50px] flex items-center justify-center'>
               <BiUser />
-            </Link>
-            <Link
+            </LinkScroll>
+            <LinkScroll
               to='services'
               activeClass='active'
               smooth={true}
@@ -73,8 +73,8 @@ const Nav = () => {
               offset={-70}
               className='cursor-pointer w-[50px] h-[50px] flex items-center justify-center'>
               <BsClipboardData />
-            </Link>
-            <Link
+            </LinkScroll>
+            <LinkScroll
               to='work'
               activeClass='active'
               smooth={true}
@@ -82,8 +82,8 @@ const Nav = () => {
               offset={-50}
               className='cursor-pointer w-[50px] h-[50px] flex items-center justify-center'>
               <BsBriefcase />
-            </Link>
-            <Link
+            </LinkScroll>
+            <LinkScroll
               to='contact'
               activeClass='active'
               smooth={true}
@@ -91,7 +91,7 @@ const Nav = () => {
               offset={-10}
               className='cursor-pointer w-[50px] h-[50px] flex items-center justify-center'>
               <BsChatSquareText />
-            </Link>
+            </LinkScroll>
           </div>
         </div>
       </div>
