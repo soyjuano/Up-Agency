@@ -69,29 +69,27 @@ const Nav = () => {
     <nav className={`fixed top-2 lg:top-8 w-full overflow-hidden z-50 ${isScrolled ? "scrolled" : ""}`}>
       <div className='lg:container mx-auto'>
         <div className='container '>
-          <div className='w-full bg-black/20 h-[86px] backdrop-blur-2xl rounded-3xl max-w-[550px] mx-auto px-1 flex justify-between items-center text-2xl text-white/50'>
+          <div className='w-full bg-black/20 h-[86px] backdrop-blur-2xl rounded-3xl max-w-[550px] mx-auto px-1 flex justify-between items-center text-white/50'>
             <div className='lg:hidden my-1 px-4'>
               <a href='#'>
                 <img
                   src={Logo}
                   alt='logo'
-                  className='sm:inline md:inline max-w-full h-auto min-w-[25px]'
+                  className='sm:inline md:inline max-w-full h-auto min-w-[55px]'
                 />
               </a>
             </div>
 
-            <ul className='flex items-center gap-5'>
+            <ul className='flex mx-auto justify-around text-center lg:gap-14'>
               {SectionIds.map((sectionId, i) => (
                 <li key={i} onClick={() => scrollToSection(sectionId)}>
                   <LinkRouter
-                    to='/'
-                    activeclass='active'
-                    className={`text-base ${activeLink === sectionId ? "active" : ""}`}
+                    to='/'                    
                   >
-                    <span className="text-3xl text-center">
-                      {activeLink === sectionId ? getIconForSection(sectionId) : getIconForSection("")}
+                    <span className="text-2xl min-h-12 flex justify-center text-center items-center">
+                      {activeLink === sectionId ? <span className="active">{getIconForSection(sectionId)}</span> : getIconForSection(sectionId)}
                     </span>
-                    <span>
+                    <span className='text-lg'>
                       {sectionId}
                     </span>
                   </LinkRouter>
