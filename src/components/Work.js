@@ -10,8 +10,8 @@ import Img3 from '../assets/el-apache-ness.jpg';
 
 const Work = () => {
   return (
-    <section className='section' id='work'>
-      <div className='container mx-auto mt-16 mb-20 lg:mt-auto'>
+    <section className='section' id='artistas'>
+      <div className='container mx-auto pt-20 lg:mt-auto'>
         <div className='flex flex-col lg:flex-row gap-x-10'>
           <motion.div 
            variants={fadeIn('right', 0.3)}

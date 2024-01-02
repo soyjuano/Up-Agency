@@ -1,21 +1,21 @@
 import React from 'react';
 // imagenes
 import Logo from '../assets/logo.svg';
+import { Link as LinkRouter } from 'react-router-dom';
 
 const Header = () => {
-  return <header className='pt-8'>
+  return <header className='pt-10' id='inicio'>
     <div className='container mx-auto'>
-      <div className='mt-4 w-auto hidden sm:hidden md:hidden lg:inline xl:inline'>
+      <div className='w-auto max-w-full min-h-20 min-w-[100px]'>
+        
         {/*   logo */}
-        <a href='#'>
+        <LinkRouter to='/'>
           <img src={Logo} alt='logo'
-            className='max-w-full h-auto min-w-[100px]'
+            className=' hidden lg:inline xl:inline lg:h-28'
           />
-        </a>
+        </LinkRouter>
       </div>
-
     </div>
-
   </header>;
 };
 

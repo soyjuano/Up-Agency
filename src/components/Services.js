@@ -57,8 +57,8 @@ const services = [
 
 const Services = () => {
   return (
-  <section className='section' id='services'>
-    <div className='container mx-auto mt-10'>
+  <section className='section' id='servicios'>
+    <div className='container mx-auto pt-24'>
       <div className='flex flex-col lg:flex-row'>
         {/* texto e imagen*/}
         <motion.div 
@@ -67,7 +67,7 @@ const Services = () => {
          whileInView={"show"}
          viewport={{once: false, amount: 0.3}}
         className='flex-1 lg:bg-services lg:bg-bottom bg-no-repeat 
-        mix-blend-lighten mb-12 lg:mb-0 text-center lg:text-left'>
+        mix-blend-lighten lg:mb-0 text-center lg:text-left'>
           <h2 className='h2 text-secondary mb-6'>Medios que Abarcamos</h2>
           <h3 className='h3 mx-auto lg:mx-0 max-w-[455px] mb-6'>
           Publicidad integral para destacar en cada plataforma de difusión

@@ -16,10 +16,10 @@ const About = () => {
     threshold: 0.5,
   });
   return (
-    <section className='section' id='about' ref={ref}>
+    <section className='section' id='nosotros' ref={ref}>
       <div className='container mx-auto mt-10'>
         <div className='flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20
-        lg:gap-y-0 h-fit'>
+        lg:gap-y-0 pt-14 '>
           {/* imagen */}
           <motion.div 
           variants={fadeIn('right', 0.3)}

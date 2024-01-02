@@ -3,6 +3,7 @@ import { SectionIds } from './SectionIds';
 import { BiHomeAlt, BiUser } from 'react-icons/bi';
 import { BsClipboardData, BsBriefcase, BsChatSquareText } from 'react-icons/bs';
 import { Link as LinkRouter } from 'react-router-dom';
+import { Link as LinkScroll } from 'react-scroll'
 import Logo from '../assets/logo.svg';
 
 const Nav = () => {
@@ -52,13 +53,13 @@ const Nav = () => {
     switch (sectionId) {
       case "inicio":
         return <BiHomeAlt />;
-      case "about":
+      case "nosotros":
         return <BiUser />;
-      case "services":
+      case "servicios":
         return <BsClipboardData />;
-      case "work":
+      case "artistas":
         return <BsBriefcase />;
-      case "contact":
+      case "contacto":
         return <BsChatSquareText />;
       default:
         return null;
@@ -66,30 +67,30 @@ const Nav = () => {
   };
 
   return (
-    <nav className={`fixed top-2 lg:top-8 w-full overflow-hidden z-50 ${isScrolled ? "scrolled" : ""}`}>
+    <nav className={`fixed top-2 lg:top-10 w-full overflow-hidden z-50 ${isScrolled ? "scrolled" : ""}`}>
       <div className='lg:container mx-auto'>
         <div className='container '>
           <div className='w-full bg-black/20 h-[86px] backdrop-blur-2xl rounded-3xl max-w-[550px] mx-auto px-1 flex justify-between items-center text-white/50'>
             <div className='lg:hidden my-1 px-4'>
-              <a href='#'>
+            <LinkScroll to='inicio'>
                 <img
                   src={Logo}
                   alt='logo'
                   className='sm:inline md:inline max-w-full h-auto min-w-[55px]'
                 />
-              </a>
+              </LinkScroll>
             </div>
 
-            <ul className='flex mx-auto justify-around text-center lg:gap-14'>
+            <ul className='flex mx-auto justify-around text-center gap-4 md:gap-8 lg:gap-14'>
               {SectionIds.map((sectionId, i) => (
                 <li key={i} onClick={() => scrollToSection(sectionId)}>
                   <LinkRouter
                     to='/'                    
                   >
-                    <span className="text-2xl min-h-12 flex justify-center text-center items-center">
+                    <span className="text-2xl min-h-12 flex justify-center text-center items-center ">
                       {activeLink === sectionId ? <span className="active">{getIconForSection(sectionId)}</span> : getIconForSection(sectionId)}
                     </span>
-                    <span className='text-lg'>
+                    <span className='text-lg hidden md:inline capitalize'>
                       {sectionId}
                     </span>
                   </LinkRouter>

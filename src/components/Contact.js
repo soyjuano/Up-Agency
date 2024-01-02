@@ -28,7 +28,7 @@ export const Contact = () => {
   };
 
   return (
-    <section className='pt-16 lg:section' id='contact'>
+    <section className='pt-16 lg:section' id='contacto'>
       <div className='container mx-auto mt-20 mb-20 lg:mb-2'>
         <div className='flex flex-col lg:flex-row'>
           {/* texto */}
