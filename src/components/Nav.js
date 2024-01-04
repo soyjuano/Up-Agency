@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { SectionIds } from './SectionIds';
-import { BiHomeAlt, BiUser } from 'react-icons/bi';
-import { BsClipboardData, BsBriefcase, BsChatSquareText } from 'react-icons/bs';
+import { BiHomeAlt, BiSolidUserCircle, BiSolidFaceMask } from 'react-icons/bi';
+import { BsFillFilterCircleFill, BsChatTextFill } from 'react-icons/bs';
 import { Link as LinkRouter } from 'react-router-dom';
 import { Link as LinkScroll } from 'react-scroll'
 import Logo from '../assets/logo.svg';
@@ -54,13 +54,13 @@ const Nav = () => {
       case "inicio":
         return <BiHomeAlt />;
       case "nosotros":
-        return <BiUser />;
+        return <BiSolidUserCircle />;
       case "servicios":
-        return <BsClipboardData />;
+        return <BsFillFilterCircleFill />;
       case "artistas":
-        return <BsBriefcase />;
+        return <BiSolidFaceMask />;
       case "contacto":
-        return <BsChatSquareText />;
+        return <BsChatTextFill />;
       default:
         return null;
     }
@@ -87,7 +87,7 @@ const Nav = () => {
                   <LinkRouter
                     to='/'                    
                   >
-                    <span className="text-2xl min-h-12 flex justify-center text-center items-center ">
+                    <span className="text-2xl min-h-11 flex justify-center text-center items-center ">
                       {activeLink === sectionId ? <span className="active">{getIconForSection(sectionId)}</span> : getIconForSection(sectionId)}
                     </span>
                     <span className='text-base hidden md:inline capitalize'>
