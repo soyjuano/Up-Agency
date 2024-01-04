@@ -90,7 +90,7 @@ const Nav = () => {
                     <span className="text-2xl min-h-12 flex justify-center text-center items-center ">
                       {activeLink === sectionId ? <span className="active">{getIconForSection(sectionId)}</span> : getIconForSection(sectionId)}
                     </span>
-                    <span className='text-lg hidden md:inline capitalize'>
+                    <span className='text-base hidden md:inline capitalize'>
                       {sectionId}
                     </span>
                   </LinkRouter>

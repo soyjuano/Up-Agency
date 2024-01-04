@@ -25,7 +25,7 @@ const Footer = () => {
                 </a>
               </div> 
           
-          <div className="flex-col justify-center items-center z-20 text-white text-center">
+          <div className="flex-col justify-center items-center text-base z-20 text-center">
             Copyright © 2024 UP! AGENCY - Todos los Derechos Reservados - Desarrollado por Juano
   
           </div>

@@ -41,7 +41,7 @@ export const Contact = () => {
             <div>
               <h4 className='text-xl text-center lg:text-start uppercase text-secondary font-medium mb-2 
             tracking-wide'>Contáctenos</h4>
-              <h2 className='text-[45px] text-center lg:text-start lg:text-[90px] leading-none mb-4'>
+              <h2 className='text-[45px] text-center lg:text-start lg:text-[70px] xl:text-[90px] leading-none mb-4'>
                 Esperamos <br />su Consulta!
               </h2>
 
