@@ -2,9 +2,14 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
-      primary: 'Orbitron',
-      secondary: 'Rajdhani',
-      tertiary: 'Aldrich',
+      primary: 'Roboto+Condensed',
+      secondary: 'K2D',
+      tertiary: 'Saira+Condensed',
+
+    /*   fontFamily: {
+        primary: 'Orbitron',
+        secondary: 'Rajdhani',
+        tertiary: 'Aldrich', */
     },
     container: {
       padding: {

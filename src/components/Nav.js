@@ -68,10 +68,10 @@ const Nav = () => {
 
   return (
     <nav className={`fixed top-2 lg:top-10 w-full overflow-hidden z-50 ${isScrolled ? "scrolled" : ""}`}>
-      <div className='lg:container mx-auto'>
-        <div className='container '>
+      <div className='container mx-auto'>
+        <div className=' '>
           <div className='w-full bg-black/20 h-[86px] backdrop-blur-2xl rounded-3xl max-w-[550px] mx-auto px-1 flex justify-between items-center text-white/50'>
-            <div className='lg:hidden my-1 px-4'>
+            <div className='lg:hidden my-1 px-1'>
             <LinkScroll to='inicio'>
                 <img
                   src={Logo}
@@ -81,7 +81,7 @@ const Nav = () => {
               </LinkScroll>
             </div>
 
-            <ul className='flex mx-auto justify-around text-center gap-4 md:gap-8 lg:gap-14'>
+            <ul className='flex mx-auto w-full justify-evenly text-center'>
               {SectionIds.map((sectionId, i) => (
                 <li key={i} onClick={() => scrollToSection(sectionId)}>
                   <LinkRouter

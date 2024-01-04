@@ -58,7 +58,7 @@ const services = [
 const Services = () => {
   return (
   <section className='section' id='servicios'>
-    <div className='container mx-auto pt-24'>
+    <div className='container mx-auto pt-24 lg:pt-36'>
       <div className='flex flex-col lg:flex-row'>
         {/* texto e imagen*/}
         <motion.div 
