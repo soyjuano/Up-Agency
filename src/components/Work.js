@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link as LinkRouter } from 'react-router-dom';
 // motion
 import { motion } from 'framer-motion';
 // variantes
@@ -30,7 +31,9 @@ const Work = () => {
                 y personalidades destacadas del mundo del espectáculo, la televisión
                 y el cine.
               </p>
+              <LinkRouter to='/artistas'>
               <button className="btn btn-sm text-primary text-[20px]">+ Artistas</button>
+              </LinkRouter>
             </div>
             
             {/* imagen Mimi*/}

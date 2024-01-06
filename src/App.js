@@ -11,6 +11,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Grafica from './components/Grafica';
 import Home from './components/Home';
+import Artistas from './components/Artistas';
 
 const App = () => {
   return (
@@ -20,7 +21,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/grafica" element={<Grafica />} />
+          <Route path="/artistas" element={<Artistas />} />
         </Routes>
       </div>
     </Router>
