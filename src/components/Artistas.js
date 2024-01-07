@@ -11,13 +11,12 @@ class Artistas extends Component {
   }
 
   consultaArtistas = () => {
-    let url = 'https://newsapi.org/v2/top-headlines?country=ar&apiKey=eb4c8b9d543e4db6bebeb74824236a2d';
+    let url = 'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=eb4c8b9d543e4db6bebeb74824236a2d';
 
     fetch(url)
       .then((respuesta) => respuesta.json())
       .then((data) => {
-        console.log(data);
-        this.setState({
+          this.setState({
           artistas: data.articles,
         });
       });
@@ -25,12 +24,15 @@ class Artistas extends Component {
 
   render() {
     return (
-      <div id='artistas' className='container row-auto'>
+      <div id='artistas' className='container mx-auto pt-10'>
+        <h2 className='h2 text-secondary flex flex-col text-center'>Artistas para contratar</h2>
+        <div className='grid grid-cols-3 gap-4'>
         {this.state.artistas.map((artista) => (
           <Artista 
           key={artista.url} 
           artista={artista} />
         ))}
+        </div>
       </div>
     );
   }
